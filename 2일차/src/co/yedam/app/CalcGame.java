@@ -9,9 +9,18 @@ import java.util.Scanner;
 public class CalcGame {
 	double a, b;
 	
+	//1 ~cnt까지의 합을 계산해서 리턴
+	int sum(int cnt) {
+		int result = 0;
+		for (int i = 1; i <= cnt; i++) {
+			result+=i;
+		}
+		return result;
+	}
+	
 	void input() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("입려:");
+		System.out.print("입력:");
 		String s1 = sc.next();
 		String s2 = sc.next();
 		
