@@ -3,6 +3,8 @@ package so.park.numbergame;
 import java.util.Scanner;
 
 /*
+ *  숫자 맞추기 게임 
+ *  작성자 : 박우혁
  * 컴퓨터가 임의의수를 입력
  * 사용자가 수를 입력하면 
  * 높다 낮다 판단 맞으면 앱 종료
