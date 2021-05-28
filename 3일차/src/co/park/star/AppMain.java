@@ -6,12 +6,12 @@ public class AppMain {
 		// TODO Auto-generated method stub
 		StarApp sa = new StarApp();
 		
-//		sa.draw(5);
-//		System.out.println("====================");
-//	
-//		sa.drawInvert(5);
+		sa.drawTitle("나무", 100);
 		
-		sa.drawEq(3);
+		sa.drawEq(4);
+		sa.drawEq(2, 6);
+		sa.drawEq(4, 8);
+		sa.drawRact(4);
 		//나무그리기
 		
 	}
