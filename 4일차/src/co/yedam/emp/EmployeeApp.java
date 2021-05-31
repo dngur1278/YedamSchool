@@ -18,7 +18,7 @@ public class EmployeeApp {
 	
 	public void input() {
 		for(int i=0; i<empNum; i++) {
-			System.out.printf("%d사번>");
+			System.out.print(i+"사번>");
 			int employeeId = sc.nextInt();
 			System.out.print("이름>");
 			String name = sc.next();
