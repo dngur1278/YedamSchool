@@ -8,7 +8,7 @@ public class GugudanApp {
 	
 	Scanner sc = new Scanner(System.in);
 	
-	void printDan() {
+	public void printDan() {
 		System.out.print("원하는 단 입력: ");
 		a = sc.nextInt();
 		for(int i=a; i<a+1; i++) {
@@ -18,7 +18,7 @@ public class GugudanApp {
 		}
 	}
 	
-	void printRange(int s, int e) {
+	public void printRange(int s, int e) {
 		//s단 부터 e단까지 출력
 		for(int j=1; j<10; j++) {
 			for(int i=s; i<=e; i++){
@@ -28,7 +28,7 @@ public class GugudanApp {
 		}
 	}
 	
-	void printAll() {
+	public void printAll() {
 		//9단까지 출력
 		for(int j=1; j<10; j++) {
 			for(int i=2; i<10; i++){
