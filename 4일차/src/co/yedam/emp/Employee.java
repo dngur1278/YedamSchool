@@ -50,19 +50,19 @@ public class Employee {
 		this(employeeId, name, 0, 0, "");
 	}
 	
-	Employee(int employeeId, String name, String email){
-		this(employeeId, name, 0, 0, email);
-	}
-	
 	Employee(int employeeId, String name, int salary){
 		this(employeeId, name, 0, salary, "");
 	}
+	
+	Employee(int employeeId, String name, String email){
+		this(employeeId, name, 0, 0, email);
+	}
 	@Override
 	public String toString() {
-		return "회사 직원 정보\n\n사번:" + employeeId + "\n이름:" + name + "\n부서번호:" + departmenId
-				+ "\n부서명:" + departmenName + "\ns급여:" + salary + "\n이메일:" + email + "\n" 
-				+ "==========================";
+		return employeeId + "  " + name + "  " + salary;
 	}
+	
+	
 	
 
 }
