@@ -19,22 +19,33 @@ public class FriendList implements FriendAccess {
 
 	@Override
 	public void update(Friend friend) {
-		if (friends.get(0).getName() == friend.getName()) {
-			friends.set(0, friend);
+		for(Friend f : friends) {
+			if (f.getName().equals(friend.getName()) && f.getGubun().equals(friend.getGubun())) {
+				friends.set(friends.indexOf(f), friend);
+			}
 		}
-		else if (friends.get(1).getName() == friend.getName()) {
-			friends.set(1, friend);
-		}
+//		if (friends.get(0).getName() == friend.getName()) {
+//			friends.set(0, friend);
+//		}
+//		else if (friends.get(1).getName() == friend.getName()) {
+//			friends.set(1, friend);
+//		}
 	}
 
 	@Override
 	public void delete(String name) {
-			if (friends.get(0).getName() == name) {
-				friends.remove(0);
+		for (Friend f : friends) {
+			if(f.getName().equals(name)) {
+				friends.remove(f);
 			}
-			else if (friends.get(1).getName() == name) {
-				friends.remove(0);
-			}	
+		}
+		
+//			if (friends.get(0).getName() == name) {
+//				friends.remove(0);
+//			}
+//			else if (friends.get(1).getName() == name) {
+//				friends.remove(0);
+//			}	
 	}
 
 	@Override

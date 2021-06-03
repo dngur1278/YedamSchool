@@ -25,6 +25,11 @@ public class FriendAppMain {
 		System.out.println();
 		System.out.println("===업데이트 확인===");
 		System.out.println( list.selectOne("김기자"));
+		
+		System.out.println();
+		System.out.println("===   전체조회   ===");
+		list.selectAll();
+		
 		//삭제
 		list.delete("홍길동");
 		
