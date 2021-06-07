@@ -25,7 +25,7 @@ public class Po2884 {
 			min = 60-(45-min);
 			
 			if(hour < 0) {
-				hour =23;
+				hour = 23;
 			}
 			System.out.println(hour+" "+min);
 		}

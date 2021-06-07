@@ -17,7 +17,6 @@ public class Po2753 {
 		Scanner scanner = new Scanner(System.in);
 
 		int year = scanner.nextInt();
-		scanner.close();
 
 		if (year % 4 == 0) {
 			if (year % 400 == 0) {

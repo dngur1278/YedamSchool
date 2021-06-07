@@ -8,7 +8,7 @@ import java.io.OutputStreamWriter;
 
 public class Po2577_1 {
 
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		int[] arr = new int[10];

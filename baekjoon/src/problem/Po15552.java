@@ -1,5 +1,5 @@
 package problem;
-
+// 문제: 각 테스트케이스마다 A+B를 한 줄에 하나씩 순서대로 출력한다.
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
