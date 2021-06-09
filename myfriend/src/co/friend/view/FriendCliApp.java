@@ -2,47 +2,38 @@ package co.friend.view;
 
 import java.util.List;
 
+import co.friend.access.FriendAccess;
+import co.friend.access.FriendDAO;
 import co.friend.access.FriendList;
 import co.friend.model.Friend;
 import co.friend.util.ScannerUtil;
 
 public class FriendCliApp {
 
-	FriendList friendList = new FriendList();
-
+	//FriendList friendList = new FriendList();
+	FriendAccess friendList = new FriendDAO();
+	
 	public void start() {
 		int menunum;
 		do {
 			menuTitle(); // 매뉴 출력
 			menunum = ScannerUtil.readInt("입력>"); // 매뉴 선택
 			switch (menunum) {
-			case 1:
-				insert();
-				break;
-			case 2:
-				update();
-				break;
-			case 3:
-				delete();
-				break;
-			case 4:
-				selectAll();
-				break;
-			case 5:
-				findName();
-				break;
-			case 6:
-				findTel();
-				break;
+			case 1: insert(); break;
+			case 2: update(); break;
+			case 3: delete(); break;
+			case 4: selectAll(); break;
+			case 5: findName(); break;
+			case 6: findTel(); break;
 			}
 		} while (menunum != 0);
 	}
 
 	public void menuTitle() {
-		System.out.println("============      친구관리      ============");
+		System.out.println("================친 구 관 리================");
 		System.out.println("1.친구추가 | 2.친구수정 | 3.친구삭제 | 4.전체조회");
 		System.out.println("5.이름으로조회 | 6.전화번호 검색 | 0.종료");		
-		System.out.println("==========================================");
+		System.out.println("=========================================");
 	}
 	
 	public void insert() {
@@ -52,13 +43,13 @@ public class FriendCliApp {
 	
 	public void update() {
 		Friend friend = new Friend();
-		friend.setName(ScannerUtil.readStr("이름"));
-		friend.setTel(ScannerUtil.readStr("전화번호"));
+		friend.setName(ScannerUtil.readStr("이름(조건)"));
+		friend.setTel(ScannerUtil.readStr("변경된 전화번호"));
 		friendList.update(friend);
 	}
 	
 	public void delete() {
-		String name = ScannerUtil.readStr();
+		String name = ScannerUtil.readStr("삭제할 이름");
 		friendList.delete(name);
 	}
 	
@@ -67,12 +58,15 @@ public class FriendCliApp {
 		for (Friend friend : list) {
 			System.out.println(friend);
 		}
+		System.out.println();
 	}
 
 	public void findName() {
 		String name = ScannerUtil.readStr("이름");
 		Friend friend = friendList.selectOne(name);
 		System.out.println(friend);
+		System.out.println("~~~~~~~~~~~~~  이름 검색 완료  ~~~~~~~~~~~~~");
+		System.out.println();
 	}
 	
 	public void findTel() {

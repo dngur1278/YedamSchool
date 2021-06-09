@@ -1,4 +1,4 @@
-package exam5;
+package exam05;
 
 public class Book {
 	private String isbn;
@@ -41,8 +41,4 @@ public class Book {
 	public String toString() {
 		return "Book isbn:" + isbn + "  name:" + name + "content:" + content;
 	}
-	
-	
-	
-	
 }

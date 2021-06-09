@@ -1,6 +1,6 @@
 package co.friend.model;
 
-public class Friend {
+public class Friend extends Object{
 	protected String gubun;	// 학교명
 	protected String name;	// 이름
 	protected String tel;	// 전화번
@@ -42,6 +42,20 @@ public class Friend {
 
 	public void setTel(String tel) {
 		this.tel = tel;
+	}
+	
+	@Override
+	public int hashCode() {
+		return this.getGubun().hashCode() + this.getName().hashCode() + this.getTel().hashCode();
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		Friend f = (Friend) obj;
+		return this.getGubun().equals(f.getGubun()) 
+				&& this.getName().equals(f.getName())
+				&& this.getTel().equals(f.getTel());
+				
 	}
 
 	@Override

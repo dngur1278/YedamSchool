@@ -223,7 +223,7 @@ public class SqliteConnect {
 				insertPerson(id, name, age, phone);
 
 			} else if (menu == 3) {
-				System.out.print("조회할 아이디를 입력하세요>");
+				System.out.print("수정할 아이디를 입력하세요>");
 				int id = scanner.nextInt();
 				scanner.nextLine();
 				Person p = getPerson(id);

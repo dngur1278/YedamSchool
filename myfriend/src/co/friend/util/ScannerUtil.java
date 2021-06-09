@@ -65,10 +65,14 @@ public class ScannerUtil {
 	}
 
 	public static Friend readFriend() { // 프랜드 객체 생성해서 입력 받은값 스필릿해서 다시 객체에 담기
-		System.out.print("구분 이름 전화번호>>");
-		String f = scanner.next();
-		String[] arr = f.split(",");
-		Friend friend = new Friend(arr[0], arr[1], arr[2]);
+		scanner.nextLine();
+		System.out.print("구분(학교,회사,동네,기타)>>");
+		String gubun = scanner.nextLine();
+		System.out.print("이름>>");
+		String name = scanner.nextLine();
+		System.out.print("전화번호>>");
+		String tel = scanner.nextLine();
+		Friend friend = new Friend(gubun, name, tel);
 		return friend;
 	}
 }

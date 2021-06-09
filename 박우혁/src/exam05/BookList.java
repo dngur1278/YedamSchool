@@ -1,10 +1,9 @@
-package exam5;
+package exam05;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class BookList extends BookAccess{
-
 	List<Book> books;
 	
 	public BookList() {
@@ -24,5 +23,22 @@ public class BookList extends BookAccess{
 			}
 		}
 		return name1;
+	}
+
+	@Override
+	public Book findIsbn(String isbn) {
+		Book book = null;
+		for(Book b : books) {
+			if (b.getIsbn().equals(isbn)) {
+				book = b;
+				break;
+			}
+		}
+		return book;
+	}
+
+	@Override
+	public List<Book> findAll() {
+		return null;
 	}
 }
