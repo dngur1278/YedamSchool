@@ -39,6 +39,10 @@ public class BookList extends BookAccess{
 
 	@Override
 	public List<Book> findAll() {
-		return null;
+		List<Book> book = new ArrayList<Book>();
+		for(Book b : books) {
+			books.add(b);
+		}
+		return books;
 	}
 }
